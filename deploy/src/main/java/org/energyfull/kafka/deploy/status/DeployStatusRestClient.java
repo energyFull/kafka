@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(name = "deployment-client", url = "${energyfull.kafka.deployment-management.url}")
+@FeignClient(name = "deployment-client", url = "${energyfull.kafka.deployment-management.url:localhost}")
 public interface DeployStatusRestClient {
     @GetMapping("/deploy/status")
     DeployStatusInfo getDeployStatus(@RequestParam String topic, @RequestParam String consumerGroup);
