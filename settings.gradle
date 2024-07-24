@@ -1,0 +1,5 @@
+rootProject.name = 'kafka'
+include 'deploy'
+include 'deploy-api'
+include 'sample-producer'
+
